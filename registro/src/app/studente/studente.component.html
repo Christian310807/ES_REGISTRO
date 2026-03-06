@@ -1,0 +1,10 @@
+<div>
+  <h2>Studente - I tuoi voti</h2>
+  <table>
+    <tr><th>Materia</th><th>Voto</th></tr>
+    <tr *ngFor="let v of voti">
+      <td>{{ v.materia }}</td>
+      <td>{{ v.voto }}</td>
+    </tr>
+  </table>
+</div>

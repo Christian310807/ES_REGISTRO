@@ -1,0 +1,12 @@
+/* Stile base per il componente docente */
+div {
+  margin: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}

@@ -1,0 +1,6 @@
+/* Stile base per la pagina accesso negato */
+.negato {
+  text-align: center;
+  color: #d32f2f;
+  margin-top: 40px;
+}

@@ -1,0 +1,29 @@
+.navbar {
+  background: #1976d2;
+  color: #fff;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.user-info {
+  font-size: 1rem;
+}
+button {
+  margin-left: 16px;
+  padding: 6px 12px;
+  border: none;
+  background: #d32f2f;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+main {
+  margin: 32px auto;
+  max-width: 800px;
+}

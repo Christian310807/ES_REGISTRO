@@ -1,0 +1,18 @@
+<div>
+  <h2>Docente - Inserisci Voto</h2>
+  <form (submit)="$event.preventDefault(); inserisciVoto()">
+    <input type="text" placeholder="Nome Studente" [(ngModel)]="studente" name="studente">
+    <input type="text" placeholder="Materia" [(ngModel)]="materia" name="materia">
+    <input type="number" placeholder="Voto" [(ngModel)]="voto" name="voto">
+    <button type="submit">Inserisci</button>
+  </form>
+  <h3>Voti di tutti gli studenti</h3>
+  <table>
+    <tr><th>Studente</th><th>Materia</th><th>Voto</th></tr>
+    <tr *ngFor="let v of voti">
+      <td>{{ v.studente }}</td>
+      <td>{{ v.materia }}</td>
+      <td>{{ v.voto }}</td>
+    </tr>
+  </table>
+</div>

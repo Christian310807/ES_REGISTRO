@@ -1,0 +1,22 @@
+<ng-container *ngIf="isLogged; else loginBlock">
+  <nav class="navbar">
+    <span class="logo">Registro Elettronico</span>
+    <span class="user-info">
+      Utente: {{ username }} | Ruolo: {{ ruolo }}
+      <button (click)="logout()">Logout</button>
+    <h1>Test Angular Registro</h1>
+    <!-- Se vedi questo, Angular sta renderizzando -->
+    </span>
+  </nav>
+  <main>
+    <ng-container *ngIf="ruolo === 'docente'; else studenteBlock">
+      <app-docente></app-docente>
+    </ng-container>
+    <ng-template #studenteBlock>
+      <app-studente></app-studente>
+    </ng-template>
+  </main>
+</ng-container>
+<ng-template #loginBlock>
+  <app-login></app-login>
+</ng-template>

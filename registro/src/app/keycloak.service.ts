@@ -4,16 +4,20 @@ import { Injectable } from '@angular/core';
 export class KeycloakService {
   private keycloak: any;
 
-  async init(): Promise<void> {
-    if (!this.keycloak) {
-      this.keycloak = (window as any).Keycloak({
-        url: 'https://supreme-enigma-5gwggp4rw5jxhvxrp-8080.app.github.dev/',
-        realm: 'registro-angular',
-        clientId: 'registro-angular'
-      });
-      await this.keycloak.init({ onLoad: 'check-sso' });
-    }
+async init(): Promise<void> {
+  if (!this.keycloak) {
+    this.keycloak = new (window as any).Keycloak({
+      url: 'https://supreme-enigma-5gwggp4rw5jxhvxrp-8080.app.github.dev',
+      realm: 'registro',
+      clientId: 'registro-angular'
+    });
+
+    await this.keycloak.init({
+      onLoad: 'check-sso',
+      checkLoginIframe: false
+    });
   }
+}
 
   login(): void {
     this.keycloak.login();
